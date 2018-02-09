@@ -1,0 +1,57 @@
+@mixin breakpoint($size) {
+  $xs: 480px;
+  $sm: 768px;
+  $md: 992px;
+  $lg: 1200px;
+  $xlg: 1440px;
+  @if $size == xs {
+    // < 768px
+    @media only screen and (max-width: $sm - 1) {
+      @content;
+    }
+  } @else if $size == sm {
+    // >= 768px < 992px
+    @media screen and (min-width: $sm) and (max-width: $md - 1) {
+      @content;
+    }
+  } @else if $size == md {
+    // >= 992px < 1200px
+    @media screen and (min-width: $md) and (max-width: $lg - 1) {
+      @content;
+    }
+  } @else if $size == lg {
+    // >=1200 < 1440px
+    @media screen and (min-width: $lg) and (max-width: $xlg - 1) {
+      @content;
+    }
+  } @else if $size == xlg {
+    // >= 1400
+    @media screen and (min-width: $xlg) {
+      @content;
+    }
+  } @else if $size == mobile {
+    // < 768px
+    @media only screen and (max-width: $sm - 1) {
+      @content;
+    }
+  } @else if $size == mobile-tablet {
+    // <= 768px
+    @media screen and (max-width: $md - 1) {
+      @content;
+    }
+  } @else if $size == tablet {
+    // >= 768px < 1024px
+    @media screen and (min-width: $sm) and (max-width: $md - 1) {
+      @content;
+    }
+  } @else if $size == tablet-desktop {
+    // >= 768px
+    @media screen and (min-width: $sm) {
+      @content;
+    }
+  } @else if $size == desktop {
+    @media screen and (min-width: $md) {
+      @content;
+    }
+  }
+}

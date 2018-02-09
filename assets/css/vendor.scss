@@ -1,0 +1,16 @@
+// @import '../../node_modules/bulma/bulma';
+
+@import '../../node_modules/bulma/sass/utilities/all';
+@import '../../node_modules/bulma/sass/base/all';
+
+$text: #000;
+
+// Elements
+@import '../../node_modules/bulma/sass/elements/tag';
+@import '../../node_modules/bulma/sass/elements/title';
+
+// Grid
+@import '../../node_modules/bulma/sass/grid/columns';
+
+// Layout
+@import '../../node_modules/bulma/sass/layout/all';
