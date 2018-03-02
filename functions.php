@@ -55,7 +55,17 @@ if (function_exists('add_theme_support'))
     add_theme_support('automatic-feed-links');
 
     // Enable post formats
-    add_theme_support( 'post-formats', array() );
+    add_theme_support( 'post-formats', array('aside', 'link', 'image', 'status', 'video') );
+
+    // Link post format
+    // https://www.elegantthemes.com/blog/tips-tricks/how-to-create-wordpress-post-formats
+    function get_my_url() {
+      if ( ! preg_match( '/<a\s[^>]*?href=[\'"](.+?)[\'"]/is', get_the_content(), $matches ) )
+        return false;
+
+      return esc_url_raw( $matches[1] );
+    }
+
 
     // Localisation Support
     load_theme_textdomain('html5blank', get_template_directory() . '/languages');

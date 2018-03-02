@@ -13,7 +13,11 @@
 
 		<!-- post title -->
 		<h2 class="post-title">
-			<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
+			<?php if ( is_single() ) { ?>
+				<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
+			<? } else { ?>
+				<a href="<?php echo get_my_url(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
+			<? } ?>
 		</h2>
 		<!-- /post title -->
 

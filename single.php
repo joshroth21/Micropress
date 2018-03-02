@@ -9,6 +9,17 @@
 		<!-- article -->
 		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
+		<!-- post formats -->
+		<?php
+			if ( has_post_format( 'aside' )) {
+				echo "<h4>aside</h4>";
+			} else if (has_post_format('gallery')) {
+			   echo "<h4>gallery</h4>";
+			} else if (has_post_format('link')) {
+			   echo "<h4>link</h4>";
+			}
+		?>
+
 			<!-- post thumbnail -->
 			<?php if ( has_post_thumbnail()) : // Check if Thumbnail exists ?>
 				<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
