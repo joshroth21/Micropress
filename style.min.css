@@ -14,11 +14,14 @@ section.loop .separator::before,section.loop .separator::after{background-color:
 section.loop .separator::before{left:0;right:52%}
 section.loop .separator::after{left:52%;right:0}
 img.extrawide{margin-left:-290px;max-width:1200px}
+.iframe-responsive{position:relative;padding-bottom:56.25%;height:0;overflow:hidden}
+.iframe-responsive iframe{position:absolute;top:0;left:0;width:100%;height:100%}
 .easy-footnote sup{background-color:#ccc;border-radius:5px;color:#fff;display:inline-block;font-size:11px;font-weight:600;height:auto;margin:0;padding:0 6px;text-align:center;width:auto}
 .easy-footnote sup:hover{background-color:#999}
 .easy-footnotes-wrapper{border-top:1px solid #ccc;font-size:12px;margin:30px 0 0;padding:30px 0 0}
 .easy-footnotes-wrapper li{margin:.5rem 0 .5rem 1rem}
 @media screen and (min-width:768px){.container{width:640px}
+.post .post-content .youtube,.post .post-content .vimeo{margin:0 -50px;padding-top:50px}
 }@media only screen and (max-width:767px){.container{margin:0 15px;width:auto}
 .header .container{margin:0}
 section.loop .separator{margin:30px 0}

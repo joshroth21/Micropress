@@ -469,4 +469,30 @@ function html5_shortcode_demo_2($atts, $content = null) // Demo Heading H2 short
     return '<h2>' . $content . '</h2>';
 }
 
+// Responsive oEmbed
+// https://wordpress.stackexchange.com/questions/254583/add-wrapper-to-only-youtube-videos-via-embed-oembed-html-filter-function
+add_filter( 'embed_oembed_html', 'wpse_embed_oembed_html', 99, 4 );
+function wpse_embed_oembed_html( $cache, $url, $attr, $post_ID ) {
+    $classes = array();
+
+    // Add these classes to all embeds.
+    $classes_all = array(
+        'iframe-responsive',
+    );
+
+    // Check for different providers and add appropriate classes.
+
+    if ( false !== strpos( $url, 'vimeo.com' ) ) {
+        $classes[] = 'vimeo';
+    }
+
+    if ( false !== strpos( $url, 'youtube.com' ) ) {
+        $classes[] = 'youtube';
+    }
+
+    $classes = array_merge( $classes, $classes_all );
+
+    return '<div class="' . esc_attr( implode( $classes, ' ' ) ) . '">' . $cache . '</div>';
+}
+
 ?>
