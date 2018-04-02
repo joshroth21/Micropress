@@ -41,7 +41,7 @@
 			<!-- post details -->
 			<div class="post-details">
 				<a class="permalink" href="<?php the_permalink(); ?>">
-					<i class="fa fa-link"></i>
+					<i class="fal fa-link"></i>
 					<span class="date"><?php the_time('F j, Y'); ?> &ndash; <?php the_time('g:i a'); ?></span>
 				</a>
 			</div>

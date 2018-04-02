@@ -379,8 +379,6 @@ a.tag:hover{text-decoration:underline}
 .hero-buttons{margin-top:1.5rem}
 .hero-head,.hero-foot{-webkit-box-flex:0;-webkit-flex-grow:0;-ms-flex-positive:0;flex-grow:0;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0}
 .hero-body{-webkit-box-flex:1;-webkit-flex-grow:1;-ms-flex-positive:1;flex-grow:1;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;padding:3rem 1.5rem}
-.section{padding:3rem 1.5rem}
-.footer{background-color:whitesmoke;padding:3rem 1.5rem 6rem}
 @media screen and (min-width:769px) and (max-width:1023px){.has-text-centered-tablet-only{text-align:center !important}
 .has-text-justified-tablet-only{text-align:justify !important}
 .has-text-left-tablet-only{text-align:left !important}
@@ -522,8 +520,6 @@ a.tag:hover{text-decoration:underline}
 .column.is-12-desktop{-webkit-box-flex:0;-webkit-flex:none;-ms-flex:none;flex:none;width:100%}
 .column.is-offset-12-desktop{margin-left:100%}
 .columns.is-desktop{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex}
-.section.is-medium{padding:9rem 1.5rem}
-.section.is-large{padding:18rem 1.5rem}
 }@media screen and (min-width:1024px) and (max-width:1215px){.has-text-centered-desktop-only{text-align:center !important}
 .has-text-justified-desktop-only{text-align:justify !important}
 .has-text-left-desktop-only{text-align:left !important}

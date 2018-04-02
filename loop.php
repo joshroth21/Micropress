@@ -13,16 +13,24 @@
 
 		<!-- post title -->
 		<h2 class="post-title">
-			<?php if ( is_single() ) { ?>
-				<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
-			<? } else { ?>
-				<a href="<?php echo get_my_url(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
-			<? } ?>
+			<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+				<? if ( has_post_format( 'link' ) ) { ?>
+					<div class="post-title-link">
+						<i class="fas fa-external-link"></i>
+					</div>
+				<? } ?>
+				<?php the_title(); ?>
+			</a>
 		</h2>
 		<!-- /post title -->
 
 		<!-- post content -->
-		<div class="post-content"><?php the_content(); ?></div>
+		<div class="post-content">
+			<? if ( has_post_format( 'link' ) ) { ?>
+			<? } else { ?>
+				<?php the_content(); ?>
+			<? } ?>
+		</div>
 		<!-- /post content -->
 
 		<!-- post excerpt -->
@@ -32,7 +40,7 @@
 		<!-- post details -->
 		<div class="post-details">
 			<a class="permalink" href="<?php the_permalink(); ?>">
-				<i class="fa fa-link"></i>
+				<i class="fal fa-link"></i>
 				<span class="date"><?php the_time('F j, Y'); ?> &ndash; <?php the_time('g:i a'); ?></span>
 			</a>
 		</div>

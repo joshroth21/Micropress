@@ -33,6 +33,22 @@ a {
   .post-title {
     font-size: 2rem;
     font-weight: 600;
+    position: relative;
+    &:hover {
+      .post-title-link svg {
+        color: $text;
+      }
+    }
+  }
+  .post-title-link {
+    position: absolute;
+    font-size: 1rem;
+    left: -2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    svg {
+      color: $link;
+    }
   }
   .post-excerpt,
   .post-content {
@@ -114,6 +130,15 @@ img {
   }
 }
 
+.footer {
+  background-color: $light-gray;
+  margin-top: 60px;
+  padding: 3rem 0;
+  .copyright {
+    text-align: center;
+  }
+}
+
 // Responsive oEmbed
 // https://www.smashingmagazine.com/2014/02/making-embedded-content-work-in-responsive-design/
 .iframe-responsive {
@@ -130,7 +155,6 @@ img {
     height: 100%;
   }
 }
-
 
 // Easy Footnotes
 .easy-footnote {

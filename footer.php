@@ -1,14 +1,15 @@
 			<!-- footer -->
-			<!-- <footer class="footer" role="contentinfo"> -->
+			<footer class="footer">
 
-				<!-- copyright -->
-				<!-- <p class="copyright">
-					&copy; <# echo date('Y'); ?> Copyright <#php bloginfo('name'); #>. <# _e('Powered by', 'html5blank'); #>
-					<a href="//wordpress.org" title="WordPress">WordPress</a> &amp; <a href="//html5blank.com" title="HTML5 Blank">HTML5 Blank</a>.
-				</p> -->
-				<!-- /copyright -->
+				<div class="container">
+					<!-- copyright -->
+					<p class="copyright">
+						Copyright &copy; <? echo date('Y'); ?> <?php bloginfo('name'); ?>
+					</p>
+					<!-- /copyright -->
+				</div>
 
-			<!-- </footer> -->
+			</footer>
 			<!-- /footer -->
 
 		<?php wp_footer(); ?>

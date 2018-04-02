@@ -66,6 +66,16 @@ if (function_exists('add_theme_support'))
       return esc_url_raw( $matches[1] );
     }
 
+    // Tumblr Links with Post Formats
+    // https://digwp.com/2011/04/tumblr-links-post-formats/
+    function sd_link_filter($link, $post) {
+        if (has_post_format('link', $post)) {
+            // Use content as permalink
+            $link = get_the_content();
+        }
+        return $link;
+    }
+    add_filter('post_link', 'sd_link_filter', 10, 2);
 
     // Localisation Support
     load_theme_textdomain('html5blank', get_template_directory() . '/languages');
